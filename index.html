@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"/>  
+    <title>COMP 3512 Assign1</title>   
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">    
+    <link rel="stylesheet" href="css/assign1.css">
+    
+</head>
+<body>
+    <main class="container">
+        <div class="header">
+            <h2 id="credits">Header</h2>
+            <span>Christopher Luchian, Comp 3532, Google Maps, W3Schools</span>
+        </div>
+        <div class="companies">
+            <h2>List of Companies</h2>
+            <div id="loader1" class="lds-ring"><div></div></div>
+            <section>
+                <label>Filter:</label>
+                <input type="text" id="filter">
+                <input type="reset" id="clear">
+                <hr>
+                <ul id="companyList"></ul>
+            </section>
+        </div>
+        <div class="companyInfo">
+            <h2>Company Information</h2>
+            <section>
+                <label>Logo:</label>
+                <img id="CompanyLogo"></img>
+                <label>Symbol:</label>
+                <span id="companySymbol"></span>
+                <label>Name:</label>
+                <span id="companyName"></span>
+                <label>Sector:</label>
+                <span id="companySector"></span>
+                <label>Subindustry:</label>
+                <span id="companySub"></span>
+                <label>Address:</label>
+                <span id="companyAdress"></span>
+                <label>Website:</label>
+                <span><a href="" id="companyHome"></a></span>
+                <label>Exchange:</label>
+                <span id="companyExchange"></span>
+                <label>Description:</label>
+                <span id="companyDescription"></span>
+            </section>  
+        </div>
+        <div class="mapBox">
+            <section>
+                <h2>Map</h2>
+            </section>
+        </div>
+        <div class="stocks">
+            <div id="loader2" class="lds-ring"><div></div></div>
+            <h2>Stock Data</h2>
+            <button class="chartButton" value='change'>View Charts</button>
+            <table>
+                <tr>
+                  <th id='date'>Date</th>
+                  <th id='open'>Open</th> 
+                  <th id='close'>Close</th>
+                  <th id='low'>Low</th>
+                  <th id='high'>High</th>
+                  <th id='vol'>Volume</th>
+                </tr>
+              </table>
+              <table id='stockTable'></table>
+        </div>
+        <div class="aveMinMax"></div>
+    </main>  
+    <script src="js/assign1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGXGgLBlqF_IsdmJeMwwr_J-raqq0u3Ew&callback=initMap"
+        async defer></script>
+</body>
+</html>
