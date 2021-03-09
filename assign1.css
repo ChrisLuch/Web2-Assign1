@@ -1,0 +1,151 @@
+body {
+    margin: 40px;
+    background-color: #e9e9e9;
+    font-family: Open Sans, sans-serif;
+    font-size: 0.8rem;
+}
+
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 20rem 25rem auto;
+    color: #444;
+}
+
+div.header, div.stocks, div.companyInfo, div.aveMinMax, div.companies {
+    background-color: #cdcdcd;
+    color: black;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.header {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+}
+
+.companies {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 3;
+}
+
+.companyInfo {
+    grid-column: 2/ span 2;
+    grid-row: 2;
+    min-height: 35em;
+}
+
+.mapBox {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+    height: 30em;
+}
+
+.stocks {
+    grid-column: 4 / span 2;
+    grid-row: 2 / span 2;
+    min-width: 35rem;
+    overflow-y: auto;
+    height: 50em;
+}
+
+.aveMinMax {
+    grid-column: 4 / span 2;
+    grid-row: 4;
+    height: 10em;
+}
+
+table, th, td {
+    text-align: center;
+    padding: 17px;
+  }
+
+table, #stockTable{
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+th {
+    cursor: pointer;
+}
+
+ul {    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+}
+
+.chartButton {
+    float: right;
+    font-size: 1rem;
+}
+
+ul#companyList li {
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+}
+
+div.companies {
+    overflow-y: auto;
+    height: 720px;
+}
+
+div.companyInfo img{
+    max-width: 20rem;
+    max-height: 25rem;
+}
+
+div.companyInfo section {
+    display: none;		/* change to "grid" when company clicked */
+    grid-gap: 5px;
+    grid-template-columns: 10rem auto;	
+}
+div.stocks section {
+    display: block;	  /*change to "block" when data loaded */
+    overflow-y: auto;
+    height: 650px;
+}
+.header span {
+    display: none;    /* change to "block" on mouseover */
+}
+
+
+/* CSS Loader source: https://loading.io/css/ */
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #cdd422;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #91db8a transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
